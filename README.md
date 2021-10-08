@@ -9,13 +9,13 @@ Sistema desenvolvido para controlar o faturamento do lava rapido e assim tendo a
       <strong>Passo 1</strong> - Para rodar é necessario baixar na maquina o xampp https://www.apachefriends.org/pt_br/index.html. Após baixado instale o xampp na maquina com o         local padrão e nesse caminho "C:\xampp\htdocs" remova o arquivo INDEX que está dentro dessa pasta "htdocs".
   </li>
   <li>
-    <strong>Passo 2</strong> - Para rodar o servidor é necessario acessar o seguinte caminho "C:\xampp", dentro dessa pasta execute o arquivo "xampp-control.exe", quando abrir o     painel do xampp start o Apache e o MySQL, para que voce consiga acessar o sistema entre no navegador e escreva na barra superior "localhost"
+    <strong>Passo 2</strong> - Para rodar o servidor é necessario acessar o seguinte caminho "C:\xampp", dentro dessa pasta execute o arquivo "xampp-control.exe", quando abrir o     painel do xampp start o Apache e o MySQL, para que voce consiga acessar o sistema entre no navegador e escreva na barra superior "localhost".
   </li>
   <li>
     <strong>Passo 3</strong> - Para que o sistema funcione 100% é necessario criar o banco de dados na maquina local, para isso voce ira acessar em outra pagina no browser     "http://localhost/phpmyadmin/", ao abrir o painel no lado direito do painel onde esta uma barra horizontal veja os seguintes nomes "Procurar, Estrutura, SQL, Pesquisar ..." clique em "SQL".
   </li>
   <li>
-    <strong>Passo 4</strong> - Agora voce ira pegar esse codigo
+    <strong>Passo 4</strong> -  Agora voce ira criar a Banco de dados e só escrever "CREATE DATABASE sistema_parana" e após isso existe uma lista na lateral esquerda é só clicar na "sistema_parana" e depois clicar em "SQL" que esta no lado direito na horizontal com esses nomes "Procurar, Estrutura, SQL, Pesquisar ..." copie esse codigo que esta abaixo e cole no "SQL".
     < /br>
       
     
