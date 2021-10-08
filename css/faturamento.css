@@ -1,0 +1,38 @@
+.area-faturamento {
+  background: white;
+  margin-top: 40px;
+  padding: 20px 0px;
+}
+.itens-faturamento-total {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.itens-faturamento {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100px;
+  background: rgb(0, 162, 255);
+  border-radius: 8px;
+}
+.itens-faturamento span {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5em;
+  transform: translateY(-10px);
+}
+
+.text-tipo-faturamento {
+  position: absolute;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  bottom: 0px;
+  padding: 5px 0px;
+  background: rgb(1, 38, 59);
+  border-radius: 0px 0px 8px 8px;
+  width: 100%;
+}

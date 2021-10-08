@@ -1,0 +1,9 @@
+@media (max-width: 620px) {
+  .itens-faturamento-total {
+    display: flex;
+    flex-direction: column;
+  }
+  .itens-faturamento {
+    margin-bottom: 20px;
+  }
+}
