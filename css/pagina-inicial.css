@@ -1,0 +1,509 @@
+/*  HEADEAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 80px;
+  width: 100%;
+
+  position: fixed;
+
+  background: rgb(0, 162, 255);
+  box-shadow: 0px 0px 3px black;
+}
+#area-barra {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.barra-1,
+.barra-2,
+.barra-3 {
+  padding: 2px;
+  margin: 5px;
+  width: 100%;
+  background-color: white;
+}
+
+#area-logo {
+  margin-right: 50px;
+}
+#area-logo a {
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+  text-decoration: none;
+}
+#area-logo a span {
+  color: rgb(100, 100, 100);
+}
+#area-logo a small {
+  color: white;
+}
+/* navbar lateral */
+#navbar-lateral {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 162, 255);
+  margin-top: 0px;
+  box-shadow: 0px 3px 2px black;
+  height: 100%;
+  width: 300px;
+  z-index: 1000;
+  position: fixed;
+  transform: translateX(-300px);
+}
+#fechar-navbar-lateral {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+}
+
+#fechar-navbar-lateral span {
+  margin: 10px;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+#fechar-navbar-lateral span:hover {
+  margin: 10px;
+  font-size: 1.5em;
+  color: black;
+  transition: 400ms;
+}
+.nav-adicionar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.nav-adicionar span {
+  background: rgb(0, 99, 156);
+  text-align: center;
+  width: 100%;
+  padding: 20px 0px;
+  box-shadow: 0px 1px 2px black;
+  border-bottom: 1px solid black;
+  z-index: 1;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 400ms;
+}
+.nav-adicionar span:active {
+  background: rgb(0, 30, 48);
+}
+.area-btns-tipos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.btn-tipo-lavagem {
+  text-decoration: none;
+  background: rgb(88, 164, 207);
+  text-align: center;
+  width: 100%;
+  padding: 20px 0px;
+  box-shadow: 0px 0px 2px black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn-tipo-lavagem:active {
+  background: rgb(0, 30, 48);
+}
+.btn-tipo-lavagem:active {
+  text-decoration: none;
+  background: rgb(0, 30, 48);
+  text-align: center;
+  width: 100%;
+  padding: 20px 0px;
+  box-shadow: 0px 0px 2px black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-item {
+  padding: 20px 0px;
+  width: 100%;
+  background: rgb(0, 131, 207);
+  box-shadow: 0px 0px 2px rgb(61, 61, 61);
+  text-decoration: none;
+  color: white;
+  transition: 400ms;
+}
+
+.nav-item:hover {
+  background: rgb(43, 151, 214);
+  transition: 400ms;
+}
+.nav-item span {
+  font-weight: 500;
+  margin-left: 30px;
+}
+
+#navbar-rodape {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 20px;
+}
+
+/* area do conteudo container */
+#container {
+  padding-top: 80px;
+  padding-bottom: 10px;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+#area-adicionar {
+  border: 0px solid red;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+#area-entrada-veiculo {
+  animation-name: areaOpcional;
+  animation: areaOpcional 400ms;
+}
+#area-formulario-add {
+  display: flex;
+  width: 550px;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+.item-form {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+.item-form input {
+  border: none;
+  padding: 10px 0px 10px 10px;
+  background: rgb(178, 216, 238);
+  width: 100%;
+}
+.input-icon {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  background: rgb(178, 216, 238);
+}
+.area-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid black;
+  height: 100%;
+  width: 50px;
+  box-sizing: border-box;
+  background: rgb(43, 151, 214);
+  color: white;
+}
+.icon-cor-valor {
+  padding: 10px;
+}
+.form-placa-modelo {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+.item-form-plac-cor {
+  text-align: center;
+  margin: 0px 2px;
+}
+.add-input-icon {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(178, 216, 238);
+}
+.add-input-icon input {
+  border: none;
+  padding: 10px 0px 10px 10px;
+  background: rgb(178, 216, 238);
+  width: 80%;
+  padding: 10px 0px 10px 10px;
+}
+.area-icon-placa {
+  display: flex;
+  padding: 10px 10px;
+  height: 100%;
+  background: rgb(43, 151, 214);
+  color: white;
+}
+
+.item-form button {
+  border: none;
+  background: rgb(43, 151, 214);
+  padding: 10px 0px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 400ms;
+}
+.item-form button:hover {
+  transition: 400ms;
+  background: rgb(0, 30, 48);
+}
+/* tipo de produto */
+.area-cera-resina {
+  width: 300px;
+}
+.item-cera-resina {
+  display: flex;
+  justify-content: space-around;
+}
+.idcera {
+  border: 2px solid rgb(43, 151, 214);
+  padding: 10px 20px;
+  background: white;
+  color: rgb(43, 151, 214);
+  cursor: pointer;
+}
+.idresina {
+  border: 2px solid rgb(43, 151, 214);
+  padding: 10px 20px;
+  background: white;
+  color: rgb(43, 151, 214);
+  cursor: pointer;
+}
+.idceras2 {
+  border: 2px solid rgb(43, 151, 214);
+  padding: 10px 20px;
+  background: rgb(43, 151, 214);
+  color: white;
+  cursor: pointer;
+}
+.idresina2 {
+  border: 2px solid rgb(43, 151, 214);
+  padding: 10px 20px;
+  background: rgb(43, 151, 214);
+  color: white;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.37);
+}
+
+/* area area-ultimos-adicionados */
+#area-ultimos-adicionados {
+  background: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+#area-ultimos-adicionados h3 {
+  border-bottom: 1px solid rgb(216, 216, 216);
+  padding: 10px 0px 10px 15px;
+  color: rgb(95, 95, 95);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#area-table {
+  display: flex;
+  justify-content: center;
+  padding: 0px 20px;
+}
+#area-table table {
+  width: 900px;
+  border-collapse: collapse;
+}
+#area-table .titulo-td td {
+  padding: 10px 0px 10px 5px;
+}
+#area-table .conteudo-td td {
+  padding: 10px 0px 10px 5px;
+  border-top: 2px solid rgb(206, 206, 206);
+  border-bottom: 2px solid rgb(206, 206, 206);
+  background: rgb(236, 236, 236);
+}
+
+/* botão imprimir */
+
+.media-imprimir i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  font-size: 1em;
+  color: white;
+  background: #013141;
+}
+.media-imprimir i:hover {
+  background: rgb(43, 151, 214);
+  cursor: pointer;
+}
+
+#area-table table .conteudo-td .media-saida {
+  display: none;
+}
+#servico-opcionais {
+  width: 100%;
+  background: rgb(43, 151, 214);
+  padding: 15px 0px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+#servico-opcionais span {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  font-weight: 300;
+  color: white;
+  border: 1px solid white;
+  transition: 400ms;
+  cursor: pointer;
+}
+#servico-opcionais span:hover {
+  margin-left: 10px;
+  padding: 5px;
+  font-weight: 300;
+  color: rgb(43, 151, 214);
+  border: 1px solid white;
+  background: white;
+  transition: 400ms;
+}
+
+/* servicos opcionais *********************************************
+******************************************************************/
+@keyframes areaOpcional {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#opc-area-servicos-opcionais {
+  display: none;
+  animation-name: areaOpcional;
+  animation: areaOpcional 400ms;
+}
+.tiposDeLavagens {
+  margin-top: 20px;
+}
+.lavagem-especiais {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.lavagem-especiais h3,
+.lavagem-adicionais h3 {
+  font-weight: 300;
+  border-bottom: 1px solid rgb(43, 151, 214);
+  padding: 10px;
+}
+.opc-tipos-opcionais {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(43, 151, 214);
+  margin: 10px 0px;
+  padding: 10px;
+  cursor: pointer;
+  color: rgb(2, 25, 39);
+}
+
+.opc-tipos-opcionais:active {
+  border: 1px solid rgb(43, 151, 214);
+  background: rgb(9, 56, 83);
+  margin: 10px 0px;
+  padding: 10px;
+  color: white;
+}
+.opc-tipos-opcionais span {
+  font-weight: 300;
+}
+.opc-tipos-opcionais i {
+  color: white;
+}
+.total-pagar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.total-pagar span {
+  margin: 10px 0px;
+  font-weight: 300;
+  font-size: 1.2em;
+  color: rgb(2, 25, 39);
+}
+.area-total-pagar {
+  display: flex;
+  width: 100%;
+  background: rgb(43, 151, 214);
+}
+.area-total-pagar input {
+  width: 100%;
+  border: none;
+  background: rgb(178, 216, 238);
+  padding-left: 10px;
+}
+.area-total-pagar span {
+  padding: 0px 10px;
+  color: white;
+}
+.btn-duchaSimples {
+  background: rgb(43, 151, 214);
+  color: white;
+}
+/* sucesso salvo */
+#salve {
+  display: none;
+}
+.sucesso-salvo {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #5cb85c;
+  animation: sucessoSalve 2s;
+  opacity: 0;
+  z-index: -20000;
+}
+.sucesso-salvo span {
+  color: white;
+  font-weight: 300;
+}
+@keyframes sucessoSalve {
+  from {
+    opacity: 1;
+    z-index: 20000;
+  }
+  to {
+    opacity: 0;
+    z-index: 20000;
+  }
+}

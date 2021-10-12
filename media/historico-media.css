@@ -1,0 +1,49 @@
+@media (max-width: 459px) {
+  #rodape-historico {
+    transform: translateY(0px);
+  }
+  .total-lavado-historico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .item-valor {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin: 5px 0px;
+  }
+  .text-valor {
+    width: 125px;
+  }
+  .text-valor i {
+    float: right;
+  }
+  .btn-info-historico {
+    background: rgb(10, 52, 77);
+    display: flex;
+    justify-content: center;
+  }
+  .btn-info-historico:active {
+    background: rgb(29, 104, 148);
+  }
+  .btn-abrir {
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0px 5px;
+  }
+}
+@media (max-width: 375px) {
+  .btn-ir-especiais a {
+    background: white;
+    color: rgb(0, 162, 255);
+    border: 1px solid rgb(0, 162, 255);
+    padding: 5px 50px;
+    transition: 400ms;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 3px;
+  }
+}

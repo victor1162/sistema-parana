@@ -1,0 +1,78 @@
+//criando banco de dados V1//
+
+create table tb_tipo_lavagem(
+	id int not null primary key AUTO_INCREMENT,
+    tipo varchar(25) not null
+);
+
+insert into tb_tipo_lavagem(tipo)values('SIMPLES');
+insert into tb_tipo_lavagem(tipo)values('CERA');
+insert into tb_tipo_lavagem(tipo)values('RESINA');
+
+create table tb_veiculos(
+	id int not null primary key AUTO_INCREMENT,
+    id_tipo_lavagem int not null DEFAULT 0,
+    FOREIGN key(id_tipo_lavagem) REFERENCES tb_tipo_lavagem(id),
+    
+    placa varchar(10) not null,
+    modelo varchar(25) not null,
+    cor_veiculo varchar(10) not null,
+   	valor float(4,2) not null,
+    data_lavagem varchar(20) not null
+);
+
+
+//   V2 tb_veiculos//
+
+create table tb_veiculos(
+	id int not null primary key AUTO_INCREMENT,
+    cera varchar(10) not null DEFAULT 'SIMPLES',
+    resina varchar(10) not null DEFAULT 'SIMPLES',
+    
+    lavagem_comum varchar(10) not null,
+    placa varchar(10) not null,
+    modelo varchar(25) not null,
+    cor_veiculo varchar(10) not null,
+   	valor float(5,2) not null,
+    data_lavagem varchar(20) not null,
+    hora_lavagem varchar(20) not null
+);
+
+//   V2 tb_opcionais
+create table tb_opcionais(
+    id int not null PRIMARY KEY AUTO_INCREMENT,
+    
+    lavagem_especiais varchar(10) not null,
+	placa varchar(10) not null,
+    modelo varchar(25) not null,
+    chassi varchar(3) not null,
+    motor_baixo varchar(3) not null,
+    motor_cima varchar(3) not null,
+    motor_completo_chassi varchar(3) not null,
+    ducha varchar(3) not null,
+    ducha_secagem varchar(3) not null,
+    ducha_acab_exter varchar(3) not null,
+    lavagem_simples varchar(3) not null,
+    lavagem_cera varchar(3) not null,
+    lavagem_resina varchar(3) not null,
+    lavagem_cera_resina varchar(3) not null,
+    valor float(4,2) not null,
+    data_lavagem varchar(20) not null,
+    hora_lavagem varchar(20) not null
+);
+
+//   V2 tb_empresas
+create table tb_empresas(
+	id int not null PRIMARY KEY AUTO_INCREMENT,
+
+    nome_empresa varchar(50) not null,
+    cnpj_empresa varchar(20) not null,
+    nome_contratante varchar(150) not null,
+    telefone_empresa varchar(17) not null,
+    celular_empresa varchar(17) not null,
+    email_empresa varchar(200) not null,
+    data_inicio varchar(30) not null,
+    data_final varchar(30) not null,
+    enviar_email varchar(10) not null,
+    valor_contrato float(4,1) not null
+);

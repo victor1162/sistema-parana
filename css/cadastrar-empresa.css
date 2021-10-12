@@ -1,0 +1,160 @@
+@keyframes openCadastro {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.efeito-1 {
+  animation: openCadastro 400ms;
+}
+.efeito-2 {
+  animation: openCadastro 500ms;
+}
+
+.efeito-3 {
+  animation: openCadastro 600ms;
+}
+.efeito-4 {
+  animation: openCadastro 700ms;
+}
+.efeito-5 {
+  animation: openCadastro 800ms;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.area-section-empresa {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.formulario-empresas {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  width: 550px;
+  padding: 20px 0px;
+  margin-bottom: 30px;
+}
+.formulario-empresas h3 {
+  background: rgb(43, 151, 214);
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 15px 0px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.area-cadastro-empresas {
+  border: 0px solid red;
+}
+.area-inputs-em {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.area-inputs-em label {
+  text-transform: uppercase;
+}
+.area-icon-input-emp {
+  display: flex;
+  background: rgb(178, 216, 238);
+  margin-top: 5px;
+}
+.area-icon-input-emp input {
+  border: none;
+  background: rgb(178, 216, 238);
+  padding: 10px 0px 10px 10px;
+  font-size: 0.9em;
+}
+.area-icone-em {
+  padding: 10px;
+  background: rgb(43, 151, 214);
+  color: white;
+}
+
+/* area-cadastro-empresas-2 */
+.formulario-empresas h4 {
+  background: rgb(43, 151, 214);
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 15px 0px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.area-cadastro-empresas-2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.area-inicio-fim {
+  display: flex;
+}
+.data-inicio-fim {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 5px;
+}
+.separar-lemento {
+  border: 1px solid rgb(43, 151, 214);
+}
+.data-inicio-fim label {
+  margin-bottom: 10px;
+}
+.data-inicio-fim input {
+  border: 1px solid rgb(43, 151, 214);
+  width: 150px;
+}
+/* area-cadastro-empresas-3 */
+.area-cadastro-empresas-3 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.area-checkbox {
+  width: 313px;
+  margin-bottom: 20px;
+}
+.checkboxs {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.area-checkbox p {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+/* area-cadastro-empresas-4  submit*/
+.area-cadastro-empresas-4 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.btn-salvar-cadastro {
+  border: none;
+  background: rgb(43, 151, 214);
+  padding: 10px 40px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 400ms;
+}
+.btn-salvar-cadastro:hover {
+  transition: 400ms;
+  background: rgb(0, 30, 48);
+}

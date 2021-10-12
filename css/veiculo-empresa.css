@@ -1,0 +1,113 @@
+#area-veiculos-empresas {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.nome-veiculo-empresa {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px 10px;
+  margin-bottom: 20px;
+  background: rgb(0, 30, 48);
+  width: 100%;
+  color: white;
+}
+.nome-veiculo-empresa span {
+  display: inline-block;
+  padding: 0px 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.btn-close-empresa {
+  border: 1px solid white;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 8px 0px 0px 8px;
+}
+.btn-close-empresa:hover {
+  border: 1px solid white;
+  margin-right: 10px;
+  background: white;
+  color: rgb(0, 30, 48);
+}
+.area-selecionar-empresa {
+  background: white;
+  width: 300px;
+  padding: 10px 10px 10px 10px;
+}
+.area-selecionar-empresa h3 {
+  font-weight: 300;
+  border-bottom: 1px solid rgb(43, 151, 214);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.area-btn-empresa {
+  display: flex;
+  width: 100%;
+  background: rgb(0, 30, 48);
+  margin-bottom: 10px;
+  align-items: center;
+}
+.area-btn-empresa .number-empresa {
+  display: block;
+  color: white;
+  text-align: center;
+  width: 40px;
+  font-weight: 300;
+}
+.item-empresa {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  background: rgb(43, 151, 214);
+
+  cursor: pointer;
+  width: 100%;
+}
+.item-empresa:active {
+  background: rgb(0, 74, 121);
+}
+.item-empresa span {
+  white-space: nowrap;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item-empresa span,
+.item-empresa i {
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* configurando add-remover-campo */
+.add-remover-campo {
+  display: none;
+}
+.campo-adicionar-especiais {
+  width: 100%;
+  background: rgb(43, 151, 214);
+  padding: 15px 0px;
+  margin-bottom: 15px;
+  display: none;
+  justify-content: space-between;
+}
+.campo-adicionar-especiais span {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  font-weight: 300;
+  color: white;
+  border: 1px solid white;
+  transition: 400ms;
+  cursor: pointer;
+}
+.campo-adicionar-especiais span:hover {
+  margin-left: 10px;
+  padding: 5px;
+  font-weight: 300;
+  color: rgb(43, 151, 214);
+  border: 1px solid white;
+  background: white;
+  transition: 400ms;
+}

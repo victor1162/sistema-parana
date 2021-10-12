@@ -1,0 +1,162 @@
+/* CONFIGURANDO O FORMULARIO ADD */
+
+/*CONFIGURANDO A TABELA*/
+@media (max-width: 810px) {
+  #container {
+    padding-top: 80px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  #area-formulario-add {
+    display: flex;
+    width: 100%;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0px;
+    border: 0px solid red;
+  }
+  #area-table {
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+  }
+  #area-table table {
+    width: 900px;
+    border-collapse: collapse;
+  }
+  #area-table .titulo-td td {
+    display: none;
+  }
+  .conteudo-td {
+    margin-bottom: 30px;
+  }
+  #area-table .conteudo-td td {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 0px 10px 0px;
+    border-top: 2px solid rgb(206, 206, 206);
+    border-bottom: 2px solid rgb(206, 206, 206);
+    background: rgb(236, 236, 236);
+  }
+  .media-placa::before {
+    content: "PLACA";
+    margin-bottom: 10px;
+    color: rgb(0, 30, 48);
+    background: linear-gradient(120deg, rgb(43, 151, 214), rgb(122, 188, 245));
+    color: white;
+    padding: 5px 0px;
+  }
+  .media-Modelo::before {
+    content: "MODELO";
+    margin-bottom: 10px;
+    color: rgb(0, 30, 48);
+    background: linear-gradient(120deg, rgb(43, 151, 214), rgb(122, 188, 245));
+    color: white;
+    padding: 5px 0px;
+  }
+  .media-cor::before {
+    content: "COR";
+    margin-bottom: 10px;
+    color: rgb(0, 30, 48);
+    background: linear-gradient(120deg, rgb(43, 151, 214), rgb(122, 188, 245));
+    color: white;
+    padding: 5px 0px;
+  }
+  .media-tipo::before {
+    content: "TIPO";
+    margin-bottom: 10px;
+    color: rgb(0, 30, 48);
+    background: linear-gradient(120deg, rgb(43, 151, 214), rgb(122, 188, 245));
+    color: white;
+    padding: 5px 0px;
+  }
+  .media-valor::before {
+    content: "VALOR";
+    margin-bottom: 10px;
+    color: rgb(0, 30, 48);
+    background: linear-gradient(120deg, rgb(43, 151, 214), rgb(122, 188, 245));
+    color: white;
+    padding: 5px 0px;
+  }
+  .media-data::before {
+    content: "DATA";
+    margin-bottom: 10px;
+    color: rgb(0, 30, 48);
+    background: linear-gradient(120deg, rgb(43, 151, 214), rgb(122, 188, 245));
+    color: white;
+    padding: 5px 0px;
+  }
+  .media-imprimir::before {
+    content: "IMPRIMIR";
+    margin-bottom: 10px;
+    color: rgb(0, 30, 48);
+    background: linear-gradient(120deg, rgb(43, 151, 214), rgb(122, 188, 245));
+    color: white;
+    padding: 5px 0px;
+  }
+  .media-imprimir i {
+    padding: 10px 0px;
+    margin: 10px 0px;
+    font-size: 1.8em;
+    color: white;
+    background: #013141;
+  }
+  #area-table table .conteudo-td .media-saida {
+    display: block;
+    background: white;
+    border-bottom: 2px;
+    padding: 30px 0px;
+  }
+}
+
+@media (max-width: 450px) {
+  /* placa & modelo */
+  .form-placa-modelo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+  }
+  .item-form-plac-cor {
+    margin: 10px 0px;
+  }
+  .item-form {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    margin: 20px 0px;
+  }
+  .area-cera-resina {
+    width: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  /* placa & modelo */
+  .form-placa-modelo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .item-form-plac-cor {
+    margin: 10px 0px;
+  }
+  .item-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 20px 0px;
+  }
+  .item-form {
+    width: 100%;
+  }
+  .area-cera-resina {
+    width: 100%;
+  }
+}
