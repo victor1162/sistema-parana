@@ -64,7 +64,7 @@ Sistema desenvolvido para controlar o faturamento do lava rapido e assim tendo a
 
 
 <div>
-  <span style="color:red;">ATENÇÃO</span>
+  <span>ATENÇÃO</span>
   <br>
   Algumas informações pode esta faltando para que o sistema funcione 100%, versão disponiveis (BETA).
 </div>
