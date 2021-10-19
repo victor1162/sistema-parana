@@ -74,7 +74,7 @@ require 'veiculo-controller.php';
                 <h3>Selecione uma empresa</h3>
 
                 <?php 
-                  if(isset($empresas)){
+                  if($empresas != array()){
 
                   
                   foreach($empresas as $key => $empresa) { 
@@ -84,7 +84,7 @@ require 'veiculo-controller.php';
                 ?>
                 <div class="area-btn-empresa">
                     <span class="number-empresa"><?= $key ?></span>
-                    <div class="item-empresa" onclick="abrirSelecionado('<?= $empresa['nome_empresa'] ?>', <?= $empresa['id'] ?>)">
+                    <div class="item-empresa" onclick="abrirSelecionado('<?= $empresa['nome_empresa'] ?>', <?= $empresa['id_empresas'] ?>)">
                         <span><?= $empresa['nome_empresa'] ?></span>
                         <i class="bi bi-building"></i>
                         <input type="hidden" class="abrir-selecionado" value="1">

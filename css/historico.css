@@ -106,10 +106,12 @@
   border-radius: 8px;
 }
 .remover-item-especial {
+  display: block;
   color: white;
   font-size: 1.2em;
   cursor: pointer;
   transition: 400ms;
+  margin-bottom: 10px;
 }
 .remover-item-especial:hover {
   color: rgb(141, 3, 3);
@@ -139,7 +141,7 @@
 .coluna-especiais-2 span {
   font-weight: 300;
   text-transform: uppercase;
-  margin: 5px 0px;
+  margin: 2px 0px;
   color: white;
   padding-bottom: 4px;
   border-bottom: 1px solid #fff;

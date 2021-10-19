@@ -29,7 +29,7 @@ class CadastrarEmpresasService{
     }
     public function recuperarEmpresas(){
         $query = '
-            select * from tb_empresas order by id desc
+            select * from tb_empresas order by id_empresas desc
         ';
 
         $stmt = $this->conexao->prepare($query);

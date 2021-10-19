@@ -70,5 +70,55 @@ class CadastrarEmpresa{
         $this->$atributo = $valor;
     }
 }
+class VeiculoEmpresa{
+    private $id;
+    private $fk_id_empresas;
+    private $lavagem_comum;
+    private $placa;
+    private $modelo;
+    private $cor_veiculo;
+    private $cera;
+    private $resina;
+    private $valor;
+    private $data_lavagem;
+    private $hora_lavagem;
+
+    public function __get($atributo){
+        return $this->$atributo;
+    }
+
+    public function __set($atributo, $valor){
+        $this->$atributo = $valor;
+    }
+}
+class VeiculoEmpresaOpcionais{
+    private $id;
+    private $fk_id_empresas;
+    private $lavagem_especiais;
+    private $placa;
+    private $modelo;
+    private $chassi;
+    private $motor_baixo;
+    private $motor_cima;
+    private $motor_completo_chassi;
+    private $ducha;
+    private $ducha_secagem;
+    private $ducha_acab_exter;
+    private $lavagem_simples;
+    private $lavagem_cera;
+    private $lavagem_resina;
+    private $lavagem_cera_resina;
+    private $valor;
+    private $data_lavagem;
+    private $hora_lavagem;
+
+    public function __get($atributo){
+        return $this->$atributo;
+    }
+
+    public function __set($atributo, $valor){
+        $this->$atributo = $valor;
+    }
+}
 
 ?>

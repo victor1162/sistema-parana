@@ -31,6 +31,14 @@
     color: white;
     padding: 5px 0px;
   }
+  .media-recem-empresa::before {
+    content: "EMPRESA";
+    margin-bottom: 10px;
+    color: rgb(0, 30, 48);
+    background: linear-gradient(120deg, rgb(43, 151, 214), rgb(122, 188, 245));
+    color: white;
+    padding: 5px 0px;
+  }
   .media-recem-placa::before {
     content: "PLACA";
     margin-bottom: 10px;

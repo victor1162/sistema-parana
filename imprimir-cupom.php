@@ -54,7 +54,7 @@ require 'veiculo-controller.php';
     <![endif]-->
     <title>sistema - Paraná</title>
   </head>
-  <body class="body-impressao">
+  <body class="body-impressao" onafterprint="carregamento()">
         <section class="area-imprimir">
             <h3>Você deseja imprimir CUPOM ?</h3>
             <span class="btn-confirme sim-imprimir">SIM</span>

@@ -1,8 +1,12 @@
 <?php
 require './controller/veiculo.model.php';
+
 require './controller/veiculo.service.php';
 require './controller/opcionais.service.php';
-require './controller/cadastrar_empresas.php';
+require './controller/veiculo_empresa.service.php';
+require './controller/veiculo_empresa_opcionais.service.php';
+
+require './controller/cadastrar_empresas_service.php';
 require './controller/conexao.php';
 
 
@@ -14,6 +18,13 @@ $horaAtual = date('H:i');
 
 $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
+// $veiculoEmpresa = new VeiculoEmpresa();
+// $veiculoEmpresaOpcionais = new VeiculoEmpresaOpcionais();
+// $conexao = new Conexao();
+
+// $veiculoEmpresaService = new VeiculoEmpresaService($conexao, $veiculoEmpresa);
+// $veiculoEmpresaServiceOpcionais = new VeiculoEmpresaOpcionaisService($conexao, $veiculoEmpresaOpcionais);
+// $veiculoEmpresaServiceOpcionais->testeOp();
 
 if($acao == 'adicionar'){
     
@@ -364,25 +375,146 @@ if($acao == 'adicionar'){
     $ultimoAdd = $veiculoService->ultimosAdicionados();
     $empresas = $empresaService->recuperarEmpresas();
     
+    
+    
 }else if($acao == 'veiculoEmpresa'){
-    $tipo_lavagem = $_POST['lavagem_comum'];
-    echo '<pre>';
-    print_r($_POST);
-    echo '</pre>';
+    $tipo_lavagem = $_POST['lavagem_comum']; // essa variavel define o tipo da lavagem
+
+    $veiculoEmpresa = new VeiculoEmpresa();
+    $conexao = new Conexao();
+
+    $veiculoEmpresa->__set('fk_id_empresas', $_POST['id_empresa']);
+    $veiculoEmpresa->__set('lavagem_comum', $_POST['lavagem_comum']);
+    $veiculoEmpresa->__set('placa', $_POST['placa']);
+    $veiculoEmpresa->__set('modelo', $_POST['modelo']);
+    $veiculoEmpresa->__set('cor_veiculo', $_POST['cor_veiculo']);
+    $veiculoEmpresa->__set('cera', $_POST['cera']);
+    $veiculoEmpresa->__set('resina', $_POST['resina']);
+    $veiculoEmpresa->__set('valor', $_POST['valor']);
+    $veiculoEmpresa->__set('data_lavagem', $dataAtual);
+    $veiculoEmpresa->__set('hora_lavagem', $horaAtual);
+
+    $veiculoEmpresaService = new VeiculoEmpresaService($conexao, $veiculoEmpresa);
 
     //salvar no banco de dados para
-
-    //imprimir na sequencia
-
-    
-    
+    $veiculoEmpresaService->adicionarVeiculoEmpresa();
 
 }else if($acao == 'veiculoEmpresaEspeciais'){
-    $tipo_lavagem = $_POST['lavagem_especiais'];
+    $tipo_lavagem = $_POST['lavagem_especiais']; // essa variavel define o tipo da lavagem
+    // echo '<pre>';
+    // print_r($_POST);
+    // echo '</pre>';
+    $veiculoEmpresaOpcionais = new VeiculoEmpresaOpcionais();
+    $conexao = new Conexao();
+
+    $veiculoEmpresaOpcionais->__set('fk_id_empresas', $_POST['id_empresa']);
+    $veiculoEmpresaOpcionais->__set('lavagem_especiais', $_POST['lavagem_especiais']);
+    $veiculoEmpresaOpcionais->__set('placa', $_POST['placa']);
+    $veiculoEmpresaOpcionais->__set('modelo', $_POST['modelo']);
+    $veiculoEmpresaOpcionais->__set('chassi', $_POST['chassi']);
+    $veiculoEmpresaOpcionais->__set('motor_baixo', $_POST['motor-baixo']);
+    $veiculoEmpresaOpcionais->__set('motor_cima', $_POST['motor-cima']);
+    $veiculoEmpresaOpcionais->__set('motor_completo_chassi', $_POST['motor-completo-chassi']);
+    $veiculoEmpresaOpcionais->__set('ducha', $_POST['ducha']);
+    $veiculoEmpresaOpcionais->__set('ducha_secagem', $_POST['ducha-secagem']);
+    $veiculoEmpresaOpcionais->__set('ducha_acab_exter', $_POST['ducha-acab-exter']);
+    $veiculoEmpresaOpcionais->__set('lavagem_simples', $_POST['lavagem-simples']);
+    $veiculoEmpresaOpcionais->__set('lavagem_cera', $_POST['lavagem-cera']);
+    $veiculoEmpresaOpcionais->__set('lavagem_resina', $_POST['lavagem-resina']);
+    $veiculoEmpresaOpcionais->__set('lavagem_cera_resina', $_POST['lavagem-cera-resina']);
+    $veiculoEmpresaOpcionais->__set('valor', $_POST['valor']);
+    $veiculoEmpresaOpcionais->__set('data_lavagem', $dataAtual);
+    $veiculoEmpresaOpcionais->__set('hora_lavagem', $horaAtual);
+
+    $veiculoEmpresaServiceOpcionais = new VeiculoEmpresaOpcionaisService($conexao, $veiculoEmpresaOpcionais);
+    $veiculoEmpresaServiceOpcionais->adicionarVeiculoEmpresaOpcionais();
+}else if($acao == 'recemAdicionadosEmpresa'){
+    // model
+    $veiculoEmpresa = new VeiculoEmpresa();
+    $veiculoEmpresaOpcionais = new VeiculoEmpresaOpcionais();
+    $conexao = new Conexao();
+
+    $veiculoEmpresa->__set('data_lavagem', $dataAtual);
+    $veiculoEmpresaOpcionais->__set('data_lavagem', $dataAtual);
+    //services
+    $veiculoEmpresaServiceOpcionais = new VeiculoEmpresaOpcionaisService($conexao, $veiculoEmpresaOpcionais);
+    $veiculoEmpresaService = new VeiculoEmpresaService($conexao, $veiculoEmpresa);
+
+    // paginacao
+    $total_registro_pagina = 5;
+    $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
+    $deslocamento = ($pagina - 1) * $total_registro_pagina;
+    
+    //metodos
+    $recuperarVeiculoEmpresa = $veiculoEmpresaService->recuperarVeiculoEmpresa($total_registro_pagina, $deslocamento);
+    $total_veiculos = $veiculoEmpresaService->getVeiculoEmpresa();
+    $total_de_paginas = ceil($total_veiculos[0]['total'] / $total_registro_pagina);
+    $recVeicEmpOpcionais = $veiculoEmpresaServiceOpcionais->recuperarVeiculoEmpresasOpcionais();
+    $recEmpresa = $veiculoEmpresaService->recEmpresa();
+    $totalVeiculos = count($recuperarVeiculoEmpresa) + count($recVeicEmpOpcionais);
+    $totalSomadoEspecias = $veiculoEmpresaServiceOpcionais->somarValorVeiculoEmpresaEspeciais();
+    $totalSomado = $veiculoEmpresaService->somarValorVeiculos();
+    $totalSomadoDia = $totalSomadoEspecias[0]['total'] + $totalSomado[0]['total'];
+
+
+
+
+
+
+    // echo '<pre>';
+    // print_r($recVeicEmpOpcionais);
+    // echo '</pre>';
+
+
+}else if($acao == 'atualizarVeiculoEmpresa'){
+    $veiculoEmpresa = new VeiculoEmpresa();
+    $conexao = new Conexao();
+
+    $veiculoEmpresa->__set('id', $_POST['id']);
+    $veiculoEmpresa->__set('placa', $_POST['placa']);
+    $veiculoEmpresa->__set('modelo', $_POST['modelo']);
+    $veiculoEmpresa->__set('cor_veiculo', $_POST['cor_veiculo']);
+    $veiculoEmpresa->__set('cera', $_POST['cera']);
+    $veiculoEmpresa->__set('resina', $_POST['resina']);
+    $veiculoEmpresa->__set('valor', $_POST['valor']);
+    $veiculoEmpresa->__set('data_lavagem', $dataAtual);
+    $veiculoEmpresa->__set('hora_lavagem', $horaAtual);
+
+    $veiculoEmpresaService = new VeiculoEmpresaService($conexao, $veiculoEmpresa);
+
+    $veiculoEmpresaService->atualizarVeiculosEmpresa();
+
+    header('Location: recem-adicionados-empresa.php');
     // echo '<pre>';
     // print_r($_POST);
     // echo '</pre>';
     
+}else if($acao == 'atualizarVeiculoEmpresaOpcionais'){
+    $veiculoEmpresaOpcionais = new VeiculoEmpresaOpcionais();
+    $conexao = new Conexao();  
+
+    $veiculoEmpresaServiceOpcionais = new VeiculoEmpresaOpcionaisService($conexao, $veiculoEmpresaOpcionais);
+
+}else if($acao == 'removerVeiculoEmpresa'){
+    $veiculoEmpresa = new VeiculoEmpresa();
+    $conexao = new Conexao();
+
+    $veiculoEmpresa->__set('id', $_GET['id']);
+
+    $veiculoEmpresaService = new VeiculoEmpresaService($conexao, $veiculoEmpresa);
+    $veiculoEmpresaService->removerVeiculoEmpresa();
+    header('Location: recem-adicionados-empresa.php');
+
+}else if($acao == 'removerVeiculoEmpresaEspeciais'){
+    $veiculoEmpresaOpcionais = new VeiculoEmpresaOpcionais();
+    $conexao = new Conexao();
+
+    $veiculoEmpresaOpcionais->__set('id', $_GET['id-veiculo-empresas-especiais']);
+    $veiculoEmpresaService = new VeiculoEmpresaOpcionaisService($conexao, $veiculoEmpresaOpcionais);
+    
+    $veiculoEmpresaService->removerVeiculoEmpresa();
+
+    header('Location: recem-adicionados-empresa.php?id-veiculo-empresas-especiais');
 }
 
 ?>

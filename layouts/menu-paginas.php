@@ -27,10 +27,17 @@
       </div>
     </div>
 
-    <a href="recem-adicionados.php" class="nav-item">
-      <span class=""><i class="bi bi-clock-history"></i></span>
-      <span>Recem adicionados</span>
-    </a>
+    <div class="nav-historico-recem">
+      <div class="btn-opcoes-recem">
+        <span class=""><i class="bi bi-clock-history"></i></span>
+        <span>Recem adicionados</span>
+      </div>
+
+      <div class="area-btns-historico">
+        <a href="recem-adicionados.php" class="btn-tipo-lavagem">VEICULO COMUM</a>
+        <a href="recem-adicionados-empresa.php" class="btn-tipo-lavagem">VEICULO EMPRESA</a>
+      </div>
+    </div>
 
     <a href="historico.php" class="nav-item">
       <span class=""><i class="bi bi-card-text"></i></span>

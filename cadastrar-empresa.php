@@ -32,7 +32,7 @@ if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM'){
     <script src="js/script.js"></script>
     <script src="js/pagina-inicial.js"></script>
     <script src="js/imprimir.js"></script>
-    <script defer src="js/eventos-form-selecionar.js"></script>
+    
     <script defer src="js/mascara-inputs.js"></script>
     <script defer src="js/cadastrar-empresa.js"></script>
      

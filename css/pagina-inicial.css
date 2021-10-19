@@ -160,6 +160,32 @@ header {
   margin-left: 30px;
 }
 
+/* btn-historico */
+.area-btns-historico {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.btn-opcoes-recem {
+  padding: 20px 0px;
+  background: rgb(0, 131, 207);
+  cursor: pointer;
+  transition: 400ms;
+}
+.btn-opcoes-recem:hover {
+  padding: 20px 0px;
+  background: rgb(43, 151, 214);
+  transition: 400ms;
+}
+.btn-opcoes-recem span {
+  font-weight: 500;
+  margin-left: 30px;
+  color: white;
+}
+.area-btns-historico .btn-tipo-lavagem {
+  font-size: 0.8em;
+}
+
 #navbar-rodape {
   width: 100%;
   text-align: center;

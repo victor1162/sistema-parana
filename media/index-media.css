@@ -7,8 +7,9 @@
     width: 350px;
   }
   .apresentacao-inicial {
-    width: 100%;
+    width: auto;
     height: 50%;
+    margin-bottom: 25px;
   }
   #area-formulario {
     width: 100%;
@@ -16,7 +17,7 @@
 }
 @media (max-width: 444px) {
   #area-imagem-inicial img {
-    width: 350px;
+    width: 70%;
   }
   .area-item {
     width: 100%;
@@ -29,8 +30,9 @@
     width: 80%;
   }
   .apresentacao-inicial {
-    width: 100%;
+    width: auto;
     height: 50%;
+    margin-bottom: 25px;
   }
   .input-inicial {
     width: 100%;

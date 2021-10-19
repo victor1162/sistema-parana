@@ -20,6 +20,69 @@ document.querySelector('.btn-close-empresa').addEventListener('click', function(
     document.querySelector('.nome-veiculo-empresa').style.display = 'none';
     document.getElementById('area-entrada-veiculo').style.display = 'none';
     document.querySelector('.campo-adicionar-especiais').style.display = 'none';
+    document.getElementById('opc-area-servicos-opcionais').style.display = 'none';
+    document.getElementById('btn-fechar-opcionais').style.display = 'none';
+
+
+  let inputLavagem = document.getElementById("comum");
+
+  let inputPLaca = document.getElementById("placaREP1");
+  let inputModelo = document.getElementById("inputModelo");
+  let inputCor = document.getElementById("inputCor");
+
+  let btnCera = document.querySelector(".cera"); //querySelector
+  let btnResina = document.querySelector(".resina"); //querySelector
+
+  let inputValor = document.getElementById("inputValor");
+
+  // desabilitando inputs para não dar incompatibilidade com a nova entrada de valores em input
+  inputLavagem.removeAttribute("disabled", "disabled");
+  inputPLaca.removeAttribute("disabled", "disabled");
+  inputModelo.removeAttribute("disabled", "disabled");
+  inputCor.removeAttribute("disabled", "disabled");
+  btnCera.removeAttribute("disabled", "disabled");
+  btnResina.removeAttribute("disabled", "disabled");
+  inputValor.removeAttribute("disabled", "disabled");
+
+  // habilitando inputs para nova entrada lavagem especiais
+  document.getElementById("opc-area-servicos-opcionais").style.display = "none";
+
+  let opcLavagem = document.getElementById("opc-especiais");
+  let opcPlaca = document.getElementById("opc-placaREP1");
+  let opcModelo = document.querySelector(".opc-InputModelo"); //querySelector
+  let opcChassi = document.getElementById("chassi");
+  let opcMotorCima = document.getElementById("motor-cima");
+  let opcMotorBaixo = document.getElementById("motor-baixo");
+  let opcMotorCompletoChassi = document.getElementById("motor-completo-chassi");
+
+  opcLavagem.setAttribute("disabled", "disabled");
+  opcPlaca.setAttribute("disabled", "disabled");
+  opcModelo.setAttribute("disabled", "disabled");
+  opcChassi.setAttribute("disabled", "disabled");
+  opcMotorCima.setAttribute("disabled", "disabled");
+  opcMotorBaixo.setAttribute("disabled", "disabled");
+  opcMotorCompletoChassi.setAttribute("disabled", "disabled");
+
+  // habilitando inputs para nova entrada lavagem adicionais
+  let opcDucha = document.getElementById("ducha");
+  let opcDuchaSecagem = document.getElementById("ducha-secagem");
+  let opcDuchaAcabExter = document.getElementById("ducha-acab-exter");
+  let opcLavagemSimples = document.getElementById("lavagem-simples");
+  let opcLavagemCera = document.getElementById("lavagem-cera");
+  let opcLavagemResina = document.getElementById("lavagem-resina");
+  let opcLavagemCeraResina = document.getElementById("lavagem-cera-resina");
+  let totalPagar = document.getElementById("total-pagar");
+
+  opcDucha.setAttribute("disabled", "disabled");
+  opcDuchaSecagem.setAttribute("disabled", "disabled");
+  opcDuchaAcabExter.setAttribute("disabled", "disabled");
+  opcLavagemSimples.setAttribute("disabled", "disabled");
+  opcLavagemCera.setAttribute("disabled", "disabled");
+  opcLavagemResina.setAttribute("disabled", "disabled");
+  opcLavagemCeraResina.setAttribute("disabled", "disabled");
+  totalPagar.setAttribute("disabled", "disabled");
+
+
 })
 
 // verificar se inputs esta vazio ou cheio
